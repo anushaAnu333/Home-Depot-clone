@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav_cont">
+      <div id="mid_text" class="flex">
+        <div>
+          <p>Store finder</p>
+          <p>Truck & Tool Rental</p>
+          <p>For the Pro</p>
+          <p>Gift Cards</p>
+          <p>Credit Services</p>
+          <p>Track Order</p>
+          <p>Help</p>
+        </div>
+      </div>
+      <div id="nav_div" class="flex">
+        <div id="search_bar_div">
+          <div id="img_search_bar">
+            <img
+              src="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="text_search_bar_left">
+          <p>You'r shopping</p>
+          <h4>Gaum - Tamuning <i class="fa-solid fa-chevron-down"></i></h4>
+          <h4>Open till 10pm</h4>
+        </div>
+        <hr id="hr_line" />
+        <div id="delivery_text">
+          <p>Delivery to</p>
+          <p>10001 <i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+        <div id="search_input" class="flex">
+          <input
+            type="text"
+            placeholder="What can we help you find you today"
+          />
+          <div id="search_btn">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div id="search_last_text" class="flex">
+          <span>My Account <i class="fa-solid fa-user"></i></span>
+          <span>List <i class="fa-solid fa-heart"></i></span>
+          <span onclick="window.location.href='cart.html'",>Cart <i class="fa-solid fa-cart-shopping"></i></span>
+        </div>
+      </div>
+      <nav>
+        <div class='nav-wrap-container'>
+            <ul class='menu-items'>
+                <li><a href="#">All Departments</a></li>
+                <li><a href="#">
+                    Home Decor, Furniture & Kitchenware</a>
+                 <div class="menu-sub">
+                     <div class="menu-col-1">
+                          <h3 class="menu-category"><a onclick="window.location.href='beds.html'">BEDS</a></h3>
+                          <ul>
+                              <li><a href="#">Leather</a></li>
+                              <li><a href="#">Velvet</a></li>
+                              <li><a href="#">Simple</a></li>
+                          </ul>
+                      </div>
+                      <div class="menu-col-1">
+                          <h3 class="menu-category"><a onclick="window.location.href='sofa.html'">SOFA</a></h3>
+                          <ul>
+                              <li><a href="#">Comfertable</a></li>
+                              <li><a href="#">Recycling</a></li>
+                              <li><a href="#">Convertible</a></li>
+                          </ul>
+                      </div>
+                   
+                 </div>
+                </li>
+                <li><a href="">DIY Projects & Ideas</a> </li>
+                <li><a href=""> Project Calculators</a> </li>
+                <li><a href=""> Installation & Services</a> </li>
+                <li><a href=""> Specials & Offers</a></li>
+                <li><a href=""> Local Ad & Catalog</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </div>
+    <div id="container">    
+        <div class="left">
+            <div class="text">
+                <div>Your Cart</div>
+                <div class="noitems"></div>
+            </div>
+            <hr>
+            <div class="delete">Remove all Items</div>
+            <div class="resshow"></div>
+        </div>
+        <div class="right">
+            <div class="justname">Your Orders</div>
+            <hr>
+            <div class="bill">
+                <div class="billtype">
+                    <p>Subtotal</p>
+                    <input placeholder="Promo Code" class="promocode">
+                </div>
+                <div >
+                    <p class="amount">0</p>
+                    <p class="promovalue" style="color: green;">0</p>
+                </div>
+            </div>
+            <hr style="margin-top: 20px;">
+            <div class="bill" style="margin-top: -10px;">
+                <div class="billtype" style="font-size: 27px;">Total</div>
+                <div style="font-size: 27px;" class="pay"></div>
+            </div>
+            <div class="saving">You Saved 2% Off Your Items</div>
+            <div style="color: #86a9be;">Have a promo code?</div>
+            <div class="except">* Shipping and delivery charges are calculated at the lowest rate available. Other methods will be viewable on the next page.</div>
+            <div class="orange">
+                <div onclick="window.location.href='checkout.html'">Checkout</div>
+            </div>
+            <hr>
+            <div style="text-align: center; color: #507ba1 ;">Turn on Instant Checkout</div>
+            <hr>
+            <div style="text-align: center; font-size: 18px;">-or-</div> 
+            <img class="paypal" src="data:image/jpeg;base64,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">
+            <div class="boldline"></div> 
+            <div style=" margin-top: 35px; display: flex;">
+                <div><img style="width: 60px;" src="https://www.homedepot.com/mycart/assets/images/credit-card.svg"></div>
+                <div style="margin-left: 20px;  width: 100%;">
+                    <p style="font-weight: bold; font-size: 27px; margin-top: 0px; margin-bottom: 0px;">Get up to $100 off</p>
+                    <p style="margin-bottom: 0px;">Get a Home Depot Credit Card and receive $25 off your purchase of $25+ , $50 off purchases $300+,  or $100 off orders over $1,000</p>
+                    <p style="margin-top: 0px; color :#507ba1 ;">Apply Now</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="white_space"></div>
+    <div id="help_number" class="flex">
+      <div><p class="bold">How doers get more done™</p></div>
+      <div>Need Help? Please call us at: <a href="#">1-800-HOME-DEPOT (1-800-466-3337)</a></div>
+    </div>
+    <div id="footer">
+      <div id="link" class="flex">
+      <div class="links_footer" id="Customer">
+        <p class="bold">Customer Service</p>
+        <div><a href="#">Check Order Status</a></div>
+        <div><a href="#">Pay Your Credit Card</a></div>
+        <div><a href="#">Order Cancellation</a></div>
+        <div><a href="#">Returns</a></div>
+        <div><a href="#">Shipping & Delivery</a></div>
+        <div><a href="#">Product Recalls</a></div>
+        <div><a href="#">Help & FAQs</a></div>
+        <div><a href="#">Privacy & Security Center</a></div>
+      </div>
+      <div class="links_footer" id="Resources">
+        <p class="bold">Resources</p>
+        <div><a href="#">Specials & Offers</a></div>
+        <div><a href="#">Military Discount Benefit</a></div>
+        <div><a href="#">DIY Projects & Ideas</a></div>
+        <div><a href="#">Truck & Tool Rental</a></div>
+        <div><a href="#">Installation & Services</a></div>
+        <div><a href="#">Moving Supplies & Rentals</a></div>
+        <div><a href="#">Protection Plans</a></div>
+        <div><a href="#">Rebate Center</a></div>
+        <div><a href="#">Gift Cards</a></div>
+        <div><a href="#">Catalog</a></div>
+        <div><a href="#">Subscriptions</a></div>
+      </div>
+      <div class="links_footer" id="About Us">
+        <p class="bold">About Us</p>
+        <div><a href="#">Careers</a></div>
+        <div><a href="#">Corporate Information</a></div>
+        <div><a href="#">Digital Newsroom</a></div>
+        <div><a href="#">Home Depot Foundation</a></div>
+        <div><a href="#">Investor Relations</a></div>
+        <div><a href="#">Government Customers</a></div>
+        <div><a href="#">Suppliers & Providers</a></div>
+        <div><a href="#">Affiliate Program/a></div>
+        <div><a href="#">Eco Options</a></div>
+        <div><a href="#">Corporate Responsibility</a></div>
+        <div><a href="#">Home Depot Licensing Information</a></div>
+      </div>
+      <div id="footer_email">
+        <div id="box_foot_right">
+          <p><i class="fa-solid fa-credit-card"></i>Special Financing Available everyday*</p>
+          <div><a href="#">Pay & Manage Your Card</a></div>
+          <div><a href="#">Credit Offers</a></div>
+        </div>
+        <div><p>Get $5 off when you sign up for emails with savings and tips.</p></div>
+        <div id="footer_input">
+          <input type="text" placeholder="Enter Email Address">
+          <button>Go</button>
+        </div>
+        <div id="foot_logo" class="flex">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+          <i class="fa-solid fa-blog"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div id="logos">
+      <p class="center">Shop Our Brand</p>
+      <div class="flex" id="logo_first_line">
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/company-store.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/blinds-dot-com.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/home-decorator.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/hampton-bay.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/husky.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/lifeproof.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/glacier-bay.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/everbilt.png" alt=""></div>
+      </div>
+      <div class="flex" id="logo_second_line">
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/style-well.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/hdx.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/vigoro.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/traffic-master.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/defiant.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/eco-smart.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/home-accent.png" alt=""></div>
+        <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/legend-force.png" alt=""></div>
+      </div>
+      </div>
+      <div id="copyright">
+        <p>© 2000-2021 Home Depot Product Authority, LLC. All Rights Reserved. Use of this site is subject to certain Terms Of Use. <br>
+          Local store prices may vary from those displayed. Products shown as available are normally stocked but inventory levels cannot be guaranteed<br>For screen reader problems with this website, please call 1-800-430-3376 or text 38698 (standard carrier rates apply to texts)
+        </p>
+        <div>
+          <ul class="flex">
+            <li><a href="#">Privacy & Security Statement</a></li>
+            <li><a href="#">Cookie Usage</a></li>
+            <li><a href="#">My Preference Center</a></li>
+            <li><a href="#">California Privacy Rights & Report</a></li>
+            <li><a href="#">Do Not Sell My Personal Information</a></li>
+            <li><a href="#">California Supply Chain Act</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Store Directory</a></li>
+            <li><a href="#">Mobile Site</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>
+<script src="https://kit.fontawesome.com/e5ccb9f482.js" crossorigin="anonymous"></script>

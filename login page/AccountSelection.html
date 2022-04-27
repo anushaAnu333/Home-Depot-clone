@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<style>
+    body{
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 12%; */
+    }
+    
+    .text {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight:600;
+        font-size: 25px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    
+    .links p {
+        font-size: 13px;
+        color: rgb(92, 92, 92);
+        margin: 17px 0;
+    }
+    
+    #keepmesignin {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #keepmesignin label {
+        margin-left: 5px;
+    }
+    
+    #con {
+        width: 60%;
+        margin: auto;
+    }
+    
+    button {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        background-color: rgb(248,99,3);
+        font-size: 16px;
+        border:none;
+        color: white;
+        font-weight: bold;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    button:disabled{
+        cursor:not-allowed;
+        background-color: rgb(160, 160, 160);
+    }
+    .back{
+        color: rgb(62,118,151);
+    }
+    .back:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .back span{
+        padding-right: 2px ;
+    }
+    #per{
+        width: 15%;
+    }
+    #pro{
+        width: 68%;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card{
+        border: 1px solid black;
+        width: 350px;
+        padding: 20px 30px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    hr{
+        width: 300px;
+    }
+    .card:hover{
+        transform: scale(1.02);
+    }
+    .des{
+        text-align: center;
+        font-size: 14px;
+    }
+    .bold{
+        text-align: center;
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    
+    li{
+        padding: 5px;
+        font-size: 13px;
+    }
+    .center{
+        text-align: center;
+    }
+    @media screen and (max-width:1200px) {
+        .cards{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width:600px) {
+        #con{
+            width: 80%;
+        }
+    }
+    @media screen and (min-width:601px) and (max-width:900px){
+        #con{
+            width: 75%;
+        }
+    }
+</style>
+
+<body>
+    <div id="con">
+        <img alt="Orbitz" class="logo" src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/7b4c51f66559b768081eabf61db98f2d.svg">
+        <p class="text">We Didn't Recognize that Email Address</p>
+        <p class="center">Want to create an account? Select the option below that best matches your shopping needs.</p>
+        <p class="back" onclick="history.back()"><span>< </span> Back</P>
+        <div class="cards" >
+            <div class="card" id="personalAcc">
+                <img id="per" alt="Orbitz" class="logo" src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/7b4c51f66559b768081eabf61db98f2d.svg">
+                <p class="bold">Personal Account</p>
+                <p class="des">i'm shopping for myself</p>
+                <hr/>
+                <ul>
+                    <li>Enjoy faster checkout</li>
+                    <li>Save more with exclusive offers</li>
+                    <li>Favorite Product and save lists</li>
+                </ul>
+                <button id="personalAccbtn">Select & Continue</button>
+            </div>
+
+            <div class="card" id="proxtraAcc">
+                <img id="pro" alt="Orbitz" class="logo large" src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/6f019ab66451a0b60bf67d64cb406ec6.svg">
+                <p class="bold">Pro Xtra Account</p>
+                <p class="des">i'm making purchases for my business</p>
+                <hr/>
+                <ul>
+                    <li>Home Depot's loyalaty program built for Pros</li>
+                    <li>Member exclusive business tools and benefits</li>
+                    <li>it's free to join</li>
+                </ul>
+                <button id="proxtraAccbtn">Select & Continue</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="AccountSelection.js"></script>
+<script src="AccountSelection1.js"></script>
+</html>

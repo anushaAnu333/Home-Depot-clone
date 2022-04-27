@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .text {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .text1 {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin: 10px, 0;
+    }
+    
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    
+    #final {
+        align-content: center;
+        height: 45px;
+        width: 400px;
+        margin-top: 20px;
+        color: white;
+    }
+    
+    .links p {
+        font-size: 13px;
+        color: rgb(92, 92, 92);
+        margin: 17px 0;
+    }
+    
+    #keepmesignin {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #keepmesignin label {
+        margin-left: 5px;
+    }
+    
+    #con {
+        width: 90%;
+        margin: auto;
+    }
+    
+    button {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        background-color: rgb(248, 99, 3);
+        font-size: 16px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    button:disabled {
+        cursor: not-allowed;
+        background-color: rgb(160, 160, 160);
+    }
+    
+    .back {
+        color: rgb(62, 118, 151);
+    }
+    
+    .back:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .back span {
+        padding-right: 2px;
+    }
+    
+    .leg {
+        color: rgb(131, 131, 131);
+        margin: 10px 0px;
+    }
+    
+    .des {
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    
+    #fLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    input {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        height: 34px;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    #atags {
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    #atags a {
+        color: rgb(9, 108, 136);
+        text-decoration: none;
+    }
+    
+    #center {
+        text-align: center;
+        padding-top: 8px;
+    }
+    
+    #atags a:hover {
+        text-decoration: underline;
+    }
+    
+    .checkbox {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+    }
+    
+    .checkbox div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    
+    .extrasmall {
+        margin: 2px 0;
+        font-size: 12px;
+    }
+    
+    .small {
+        margin: 2px 0;
+        font-size: 15px;
+    }
+    
+    .checkbox input {
+        width: 18px;
+        height: 18px;
+    }
+    
+    #password {
+        border: none;
+        width: 70%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .points {
+        display: flex;
+        margin: 20px;
+        align-items: center;
+    }
+    
+    .points img {
+        width: 8%;
+        height: 8%;
+    }
+    
+    .points p {
+        font-weight: bold;
+        margin-left: 25px;
+        font-size: 14px;
+        width: 80%;
+    }
+    
+    #email,
+    #phone,
+    #companyname,
+    #firstname,
+    #lastname,
+    #companyaddress,
+    select {
+        border: none;
+    }
+    
+    select {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        height: 34px;
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    #password:focus,
+    #email:focus,
+    #phone:focus,
+    #zipcode:focus,
+    #companyname:focus,
+    #firstname:focus,
+    #lastname:focus,
+    #companyaddress:focus,
+    select:focus {
+        outline: none;
+    }
+    
+    .df {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid black;
+        justify-content: space-between;
+    }
+    
+    .df p {
+        padding-right: 5px;
+        margin: 10px 0;
+    }
+    
+    #show {
+        color: rgb(9, 108, 136);
+    }
+    
+    #show:hover {
+        cursor: pointer;
+    }
+    
+    .data {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    
+    .form {
+        width: 25%;
+        padding: 0 30px;
+        border-right: 1px solid rgb(167, 167, 167);
+    }
+    
+    .details {
+        width: 25%;
+        padding: 0 30px;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .data {
+            flex-direction: column;
+        }
+        .form {
+            width: 100%;
+            padding: 0px;
+            border-right: none
+        }
+        .details {
+            width: 100%;
+            padding: 0px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        #con {
+            width: 80%;
+        }
+    }
+    
+    @media screen and (min-width: 601px) and (max-width: 900px) {
+        #con {
+            width: 65%;
+        }
+    }
+</style>
+
+<body>
+    <div id="con">
+        <img alt="Orbitz" class="logo" src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/6f019ab66451a0b60bf67d64cb406ec6.svg" />
+        <p class="text">Create a Pro Xtra Account</p>
+        <div class="data">
+            <div class="details">
+                <p class="text1">Pro Xtra Account Benefits</p>
+                <p>Pro Xtra is The Home Depot’s free loyalty program built just for Pros —providing members with exclusive benefits that help them save time, save money and get rewarded. Pro Xtra benefits include:
+                </p>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/0640572ae2f4fad83f433df85f2f2e74.svg" alt="icon1" />
+                    <p>Perks</p>
+                </div>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/ae0df159b46db66a3dd238a80256a158.svg" alt="icon1" />
+                    <p>Purchase Tracking</p>
+                </div>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/c20c38ec8744fb3b193cf1a586f5b6e8.svg" alt="icon1" />
+                    <p>Exclusive Offers</p>
+                </div>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/04b3c273e6e262a872fe6f6ccef69ca1.svg" alt="icon1" />
+                    <p>Volume Pricing Program</p>
+                </div>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/50f39a1ab58c978144587b6542f0e321.svg" alt="icon1" />
+                    <p>Pro Xtra Paint Rewards</p>
+                </div>
+                <div class="points"><img src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/d4bf6105bb6420245a7557f97d2140d3.svg" alt="icon1" />
+                    <p>Text2Confirm Purchase Authorization</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <p onclick="history.back()" class="back"><span>
+                        < </span> Back</p>
+                <form class="boxes">
+                    <p class="leg">Email Address</p>
+                    <div class="df">
+                        <input id="email" type="email" />
+                    </div>
+
+                    <p class="leg">Password</p>
+                    <div class="df">
+                        <input id="password" type="password" />
+                        <p id="show" onclick="showpassword()">Show</p>
+                    </div>
+
+                    <p class="leg">Company Name</p>
+                    <div class="df">
+                        <input id="companyname" type="text" />
+                    </div>
+
+                    <p class="leg">First Name</p>
+                    <div class="df">
+                        <input id="firstname" type="text" />
+                    </div>
+
+                    <p class="leg">Last Name</p>
+                    <div class="df">
+                        <input id="lastname" type="text" />
+                    </div>
+
+                    <p class="leg">Phone</p>
+                    <div class="df">
+                        <input id="lastname" type="number" />
+                    </div>
+
+                    <p class="leg">Company Address</p>
+                    <div class="df">
+                        <input id="companyaddress" type="number" />
+                    </div>
+
+                    <p class="leg">Business or Trade</p>
+                    <div class="df">
+                        <select class="drop-down__select">
+                            <option value="DEFAULT">Select a Business or Trade</option>
+                            <option value="CARPENTRY">Carpentry</option>
+                            <option value="EDU">Education</option>
+                            <option value="ELECTRICAL">Electrical</option>
+                            <option value="FIRE WATER REST">Fire/Water Restoration</option>
+                            <option value="GOVERNMENT">Government</option>
+                            <option value="HANDYPERSON">Handyperson</option>
+                            <option value="HEALTHCARE">Healthcare</option>
+                            <option value="HOMEOWNER">Homeowner/Consumer</option>
+                            <option value="HOTELS">Hotels and Lodging</option>
+                            <option value="HOUSING AUTHORITIES">Housing Authorities</option>
+                            <option value="IMP EXP">Import/Export</option>
+                            <option value="JAN BLD SRV">Janitorial Building Services</option>
+                            <option value="LANDSCAPING">Landscaping</option>
+                            <option value="MANUFACTURING">Manufacturing</option>
+                            <option value="MULT FAM CONST">MultiFamily Residential Construction</option>
+                            <option value="NON PROF ORG">Non-Profit Organization</option>
+                            <option value="NON RES CONST">Non-Residential Construction</option>
+                            <option value="NON RES REM">Non-Residential Remodeling</option>
+                            <option value="PAINTERS">Painter</option>
+                            <option value="PLUM HVAC">Plumbing and HVAC</option>
+                            <option value="PROPTY INV">Property Investment</option>
+                            <option value="NON RES PROP MGMT">Property Management, Non-Residential</option>
+                            <option value="RES PROP MGMT">Property Management, Single and Multifamily</option>
+                            <option value="RES REM">Residential Remodeling</option>
+                            <option value="REST EVNT">Restaurants and Event Spaces</option>
+                            <option value="ROOFING">Roofing</option>
+                            <option value="RES CONST">Single-Family Residential Construction</option>
+                            <option value="OTHR">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="keepmesignin" />
+                        <div>
+                            <p class="small">Keep me signed in</p>
+                            <p class="extrasmall">Only check if ona private device</p>
+                        </div>
+                    </div>
+
+                    <button id="submit" type="submit">Register for Pro Xtra</button>
+                </form>
+
+                <div id="fLinks">
+                    <p id="center">
+                        Already Have an Account? <a href="login.html">Sign In</a>
+                    </p>
+                    <p id="atags">
+                        By selecting 'Create an Account' you are agreeing to the
+                        <a href="#">Pro Xtra Terms and Conditions</a>,
+                        <a href="#">Privacy and Security Statement</a>, &
+                        <a href="#">My Account Terms and Conditions</a>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="ProxtraAccount.js"></script>
+
+</html>

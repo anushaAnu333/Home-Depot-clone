@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Home depot</title>
+    <script src="https://kit.fontawesome.com/e5ccb9f482.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f5f5f5;
+      }
+      #navbar {
+          width: 100%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          z-index: 1;
+          position: relative;
+        }
+        #nav_cont{
+        margin: auto;
+          width: 98%;
+      }
+      #orange_head {
+        width: 100%;
+        height: 29px;
+        background-color: #f96302;
+        color: white;
+        text-align: center;
+      }
+      #orange_head > p {
+        margin: 0;
+        padding: 5px;
+      }
+      #search_bar_div img {
+        width: 60px;
+        height: 60px;
+      }
+      #search_input{
+          margin: 0;
+          padding: 0;
+          margin-top: 15px;
+
+      }
+      #search_input input {
+          width: 600px;
+          height: 30px;
+        }
+        #search_btn_img {
+            height: 23px;
+            
+        }
+        #search_btn{
+            width: 30px;
+            margin-top: 5px;
+            background-color: #f96302;
+            margin: 0;
+            padding: 0;
+            height: 35px;
+    }
+    #search_btn button{
+        width: 100%;
+        height: 100%;
+        background-color: #f96302;
+    }
+      .flex {
+        display: flex;
+      }
+      #text_search_bar_left * {
+        margin: 0;
+        /* margin-left: 10px; */
+      }
+      #hr_line {
+        margin: 0px 10px;
+        height: 70px;
+      }
+      #delivery_text * {
+        margin: 0;
+      }
+      #nav_div {
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      #search_last_text {
+        justify-content: space-between;
+        width: 250px;
+        margin-top: 20px;
+      }
+      #mid_text {
+        display: flex;
+        justify-content: end;
+      }
+      #mid_text > div {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+        font-size: 11px;
+      }
+      #mid_text p {
+        padding: 0;
+        margin: 0;
+      }
+      #navbar_bottom{
+          justify-content: space-between;
+          font-size: 14px;
+        }
+        .fa-solid, .fas {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 1000;
+          font-size: 16px;
+        }
+        .menu-items>li{
+    font-size: 14px;
+}
+.myaccount-form{
+    /* position: absolute;
+    width: 315px;
+    height: 380px;
+    background-color: white;
+    right: 98px;
+    top:60px;
+    margin-top: 2%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+    */
+    position: absolute;
+    width: 315px;
+    height: 380px;
+    background-color: white;
+    right: 63px;
+    top: 110px;
+    margin-top: 2%;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+}
+.box1{
+    width: 300px;
+    height: 90%;
+    border: 1px solid white;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.button1{
+    color: white;
+   width: 285px;
+   height: 34px;
+   font-size: 1.8rem;
+   background-color: #F96302;
+   margin-top: 4%;
+   font-family: "helvetica-neue-bold",Helvetica Neue,Helvetica,Arial,sans-serif;
+   text-decoration: none;
+   text-align: center;
+   cursor: pointer;
+   line-height: 1em;
+   box-sizing: content-box;
+   margin-bottom: 3px;
+   box-shadow: 0 3px 0 #c14c00;
+   border: 1px solid orangered;
+   
+
+   }
+   .button2{
+    color: orangered;
+   width: 285px;
+   height: 34px;
+   font-size: 1.8rem;
+   background-color: white;
+   border: none;
+ 
+   font-family: "helvetica-neue-bold",Helvetica Neue,Helvetica,Arial,sans-serif;
+   text-decoration: none;
+   text-align: center;
+   cursor: pointer;
+   line-height: 1em;
+   box-sizing: content-box;
+   margin-bottom: 3px;
+   border: 1px solid orangered;
+   
+
+}  
+.arrow-up{
+    position: absolute;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid hsl(0, 18%, 88%);
+    right: 217px;
+    top: 75px;
+    display: none;
+    
+    
+}
+
+
+
+/*     homepage     */
+
+#cat_two li{
+         margin: 5px 0px;
+         border: 2px solid black;
+         padding: 5px 10px;
+         font-size: 15px;
+        }
+        #cat_two ul{
+          display: flex;
+          padding: 0;
+         right: 100px;
+         width: 100%;
+        list-style-type: none;
+       }
+       .product img{
+         width: 50%;
+       }
+       #cat_two_img div{
+         margin-top: 20%;
+       }
+       #cat_two_img div img{
+         width: 80%;
+         height: 100%;
+         gap: 2%;
+       }
+       #cat_five img{
+         margin-top: 20%;
+         width: 35%;
+       }
+       #cat_six img{
+         width: 80%;
+       }
+       #cat_six > div {
+         padding: 0;
+         text-align: center;
+         width: 100%;
+         margin-top: 20%;
+       }
+        #slideshow > div {
+          width: fit-content;
+          margin: auto;
+        }
+        #slideshow img {
+          width: 1250px;
+        }
+        .cat_div{
+          height: 340px;
+          background-color: white;
+          /* border: 2px solid black; */
+          margin-bottom: 10px;
+          padding: 10px;
+        }
+        #categories{
+          display: grid;
+          gap: 1%;
+          grid-template-columns: repeat(3,1fr);
+          width: 95%;
+          margin: auto;
+        }
+        #cat_one button{
+          background-color: #f96302;
+          width: 35%;
+          height: 10%;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        #cat_one div{
+          bottom: 10%;
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 20px;
+          border: 0;
+        }
+        #cat_four img{
+          width: 70px;
+        }
+        #cat_four div{
+          position: relative;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 30px;
+          font-size: 14px;
+        }
+        #cat_four button{
+          width: 75%;
+          background-color: #ffffff;
+          height: 10%;
+          color: rgb(93, 93, 93);
+          font-size: 20px;
+        }
+        .cat_div h2{
+          margin: 2px;
+        }
+        #wel_back{
+          width: fit-content;
+          margin: auto;
+        }
+        #shop_img{
+          width: 330px;
+        }
+        #shop_map_text h4{
+          margin: 0;
+        }
+        #shop_map_text{
+          padding: 10px;
+        }
+        #shop_right_pic img{
+          width: 345px;
+        }
+        #shop_right_text{
+          margin-left: 10px;
+        }
+        #shop_text_a{
+          justify-content: space-between;
+        }
+        #shop_heading{
+          justify-content: space-between; 
+        }
+        #shopping{
+          width: 95%;
+          font-size: 15px;
+          margin: auto;
+          background-color: white;
+          margin-top: 20px;
+        }
+        #off_div{
+          display: flex;
+          gap: 1%;
+          margin: auto;
+          width: 95%;
+          margin-top: 20px;
+        }
+        #off_div img{
+          width: 100%;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          height: 320px;
+        }
+        .off_divs h2,p{
+          margin: 10px 5px;
+        }
+        .off_divs{
+          border-bottom: #dc6c23 solid 5px;
+          border-radius: 8px;
+          height: 430px;
+        }
+        .bold{
+          font-weight: bolder;
+        }
+        #below_off{
+          width: 95%;
+          gap: 5%;
+          margin: auto;
+        }
+        #below_off img{
+          width: 80%;
+          height: 80px;
+        }
+        .below_img_div{
+          width: fit-content;
+          /* display: inline-block; */
+          margin: auto;
+        }
+        .below_off_div hr{
+          height: 2px;
+          background-color: black;
+        }
+        .below_off_div{
+          padding: 20px;
+          margin-top: 20px;
+          width: 300px;
+          height: 300px;
+          border:  5px solid rgb(202, 202, 202);
+          background-color: white;
+          font-size: 25px;
+        }
+        #foot_up_img{
+          width: 95%;
+          margin: 30px auto;
+        }
+        #foot_up_img img{
+          width: 100%;
+          height: 150px;
+        }
+       #link{
+         gap: 3%;
+         justify-content: space-between;
+       }
+       #link a{
+         color: #88a2b3;
+         text-decoration: none;
+         line-height: 1.8;
+         font-size: 13px;
+       }
+       #help_number{
+         height: 15px;
+         padding: 15px;
+         /* padding-left: 14%;
+         padding-right: 14%; */
+         background-color: #f4f5f5;
+         justify-content: space-between;
+       }
+       #help_number p{
+         margin: 0;
+       }
+       #footer{
+         background-color: white;
+         padding-top: 30px;
+        /* padding-left: 13%;
+        padding-right: 13%; */
+       }
+       #box_foot_right{
+         width: 280px;
+         height: 155px;
+         padding: 20px;
+
+         position: relative;
+         align-items: center;
+         background-color: #f4f5f5;
+        }
+        #box_foot_right div{
+         margin: 15px 0px;
+       }
+       #white_space{
+         width: 100%;
+         height: 20px;
+         background-color: white;
+       }
+       #foot_logo{
+         justify-content: space-between;
+         font-size: 30px;
+         margin-top: 30px;
+       }
+       #footer_input input{
+         width: 250px;
+         height: 30px;
+         margin-right: 0;
+       }
+       #footer_input button{
+         height: 35px;
+         background-color: #f96302;
+         color: white;
+         width: 50px;
+       }
+       .center{
+         text-align: center;
+       }
+       #logo_first_line{
+         /* gap: 1%; */
+         justify-content: space-between;
+         margin-bottom: 20px;
+         margin-top: 40px;
+        }
+        #logo_second_line{
+          /* gap: 1%; */
+          justify-content: space-between;
+          margin-bottom: 20px;
+       }
+       #logos{
+         width: 90%;
+         margin: auto;
+         font-size: 20px;
+       }
+       #copyright{
+         font-size: 13px;
+         width: 73%;
+         margin: auto;
+         text-align: center;
+       }
+       #copyright ul{
+         justify-content: space-between;
+         list-style: none;
+       }
+       #copyright a{
+         text-decoration: none;
+         font-size: 10px;
+         width: 80%;
+         color: #79b6d6;
+       }
+       #search_last_text>span:hover{
+         cursor: pointer;
+
+       }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="orange_head"><p>#1 Home Improvement Retailer</p></div>
+      <div id="navbar">
+          <div id="nav_cont">
+        <div id="mid_text" class="flex">
+          <div>
+            <p>Store finder</p>
+            <p>Truck & Tool Rental</p>
+            <p>For the Pro</p>
+            <p>Gift Cards</p>
+            <p>Credit Services</p>
+            <p>Track Order</p>
+            <p>Help</p>
+          </div>
+        </div>
+        <div id="nav_div" class="flex">
+          <div id="search_bar_div">
+            <div id="img_search_bar">
+              <img  onclick="window.location.href='index.html'",
+                src="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="text_search_bar_left">
+            <p>You'r shopping</p>
+            <h4>Gaum - Tamuning <i class="fa-solid fa-chevron-down"></i></h4>
+            <h4>Open till 10pm</h4>
+          </div>
+          <hr id="hr_line" />
+          <div id="delivery_text">
+            <p>Delivery to</p>
+            <p>10001 <i class="fa-solid fa-chevron-down"></i></p>
+          </div>
+          <div id="search_input" class="flex">
+            <input id="search-input"
+              type="text"
+              placeholder="What can we help you find you today"
+            />
+            <div id="search_btn">
+              <button id="searchbutton" type="submit" onclick="showproduct()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div id="search_last_text" class="flex">
+            <div><a style="color: black;text-decoration: none;" href="" id="myaccount">My Account</a></div>
+            <div class="arrow-up"></div>
+            <div class="myaccount-form">
+                <div class="box1">
+                    
+                    <button onclick="window.location.href='login.html'" class="button1">Sign In</button> 
+                    <p></p>
+                    <button  onclick="window.location.href='AccountSelection.html'" class="button2">Register</button>
+                </div>
+
+            </div>
+            <span>List <i class="fa-solid fa-heart"></i></span>
+            <span  onclick="window.location.href='cart.html'",>Cart <i class="fa-solid fa-cart-shopping"></i></span>
+          </div>
+        </div>
+        <nav>
+          <div class='nav-wrap-container'>
+              <ul class='menu-items'>
+                  <li><a href="#">All Departments</a></li>
+                  <li><a href="#">
+                      Home Decor, Furniture & Kitchenware</a>
+                   <div class="menu-sub">
+                       <div class="menu-col-1">
+                            <h3 class="menu-category"><a onclick="window.location.href='beds.html'">BEDS</a></h3>
+                            <ul>
+                                <li><a href="#">Leather</a></li>
+                                <li><a href="#">Velvet</a></li>
+                                <li><a href="#">Simple</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col-1">
+                            <h3 class="menu-category"><a onclick="window.location.href='sofa.html'">SOFA</a></h3>
+                            <ul>
+                                <li><a href="#">Comfertable</a></li>
+                                <li><a href="#">Recycling</a></li>
+                                <li><a href="#">Convertible</a></li>
+                            </ul>
+                        </div>
+                     
+                   </div>
+                  </li>
+                  <li><a href="">DIY Projects & Ideas</a> </li>
+                  <li><a href=""> Project Calculators</a> </li>
+                  <li><a href=""> Installation & Services</a> </li>
+                  <li><a href=""> Specials & Offers</a></li>
+                  <li><a href=""> Local Ad & Catalog</a></li>
+              </ul>
+          </div>
+      </nav>
+      </div>
+      </div>
+    
+      <div id="slideshow">
+        <div>
+          <img src="" id="slide_img" alt="">
+        </div>
+      </div>
+      <div id="wel_back" class="bold"><h1>WELCOME BACK!</h1></div>
+      <div id="categories">
+        <div class="cat_div" id="cat_one">
+          <h2>Do More With Your Account</h2>
+          <div>
+            <h3>Sign in for the Best Experience</h3>
+            <button>Sign in</button>
+            <p>Don't Have an Account? <a href="#">Create an account</a> </p>
+          </div>
+        </div>
+        <div class="cat_div" id="cat_two">
+          <h2>Top Savings For You</h2>
+          <ul>
+            <li>All</li>
+            <li>Garden Center</li>
+            <li>Bathroom Vanities</li>
+            <li>Power Tools</li>
+          </ul>
+          <div id="prod_div" class="flex">
+          <div class="product">
+            <img src="https://images.thdstatic.com/productImages/ceee9b94-8573-42f1-b195-48a6ca12505f/svn/ryobi-power-tool-combo-kits-pblck300k-64_300.jpg" alt="">
+            <p class="bold">RYOBI ONE+ 18V Brushless Cordless 5-Tool</p>
+            <p>$
+              179
+              00
+              $519.91
+              Save $340.91 (66%)</p>
+          </div>
+          <div class="product">
+            <img src="https://images.thdstatic.com/productImages/3868b3e2-0ed4-4bd6-b9fb-671248fed1f3/svn/ryobi-power-drills-p215k1-ar2042-64_300.jpg" alt="">
+            <p class="bold">RYOBI ONE+ 18V Brushless Cordless 5-Tool</p>
+            <p>$
+              69
+              00
+              $119.00
+              Save $50.00 (42%)</p>
+          </div>
+        </div>
+        </div>
+        <div class="cat_div" id="cat_three">
+          <h2>Categories</h2>
+          <div id="cat_two_img" class="flex">
+            <div><img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/Appliances-Shopbycategory.png" alt="">
+            <p>Appliances</p></div>
+            <div><img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/Bath-and-faucets-Shopbycategory.png" alt="">
+            <p>Bath & Faucets</p></div>
+          </div>
+        </div>
+        <div class="cat_div" id="cat_four">
+          <h2>My Home Depot Credit Card</h2>
+          <div>
+            <img src="https://assets.thdstatic.com/images/v1/plcc-credit-card.png" alt="">
+            <h3>Get The Card, Get Up to $100 Off*</h3>
+            <p>+6-months everyday financing on purchases over $299* on your qualifying purchase when you open a Home Depot Credit Card.</p>
+            <button>Apply Now</button>
+            <p>See <a href="#">Terms and condition</a> for offer details.</p>
+          </div>
+        </div>
+        <div class="cat_div" id="cat_five">
+          <h2>Up to $350 off Select Vacuums & Appliances</h2>
+          <div class="flex">
+          <img src="https://assets.thdstatic.com/personalized-homepage-ui/0.437.0/build/20a1fe1d2fdeab4b913be9886b901b99.png" alt="">
+          <img src="https://images.thdstatic.com/productImages/37f276eb-c7dc-41ba-a3fd-d0149145e3a4/svn/dyson-handheld-vacuums-371020-01-64_300.jpg" alt="">
+          <img src="https://images.thdstatic.com/productImages/9343096c-1589-4251-bd35-55f1a74816d4/svn/irobot-robot-vacuums-e619820-64_300.jpg" alt="">
+        </div>
+        </div>
+        <div class="cat_div" id="cat_six">
+          <h2>Trending in Your Neighborhood</h2>
+          <div class="flex">
+            <div>
+              <img src="https://images.thdstatic.com/productImages/36351fa8-1d1e-459b-962a-c05efa8e3905/svn/ecosmart-edison-bulbs-a15c6e26822s-64_300.jpg" alt="">
+              <p>Edison Bulbs</p>
+            </div>
+            <div>
+              <img src="https://images.thdstatic.com/productImages/54e02fce-5fd7-495e-9086-7748e3807c21/svn/spot-defense-brushed-nickel-pfister-widespread-bathroom-faucets-lf-049-lrgs-64_300.jpg" alt="">
+              <p>Widespread Bathroom Faucets</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      <div id="shopping">
+        <div id="shop_heading" class="flex">
+          <h2>You're Shopping Guam - Tamuning</h2>
+          <p><a href="#">Change Store
+          </a></p>
+        </div>
+        <div id="shop_content" class="flex">
+          <div><img id="shop_img" src="https://img.search.brave.com/D0LulFKCg8MwhR_SEb3UnfORqawU94OiCFj6FfS1uQE/rs:fit:1200:675:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3VtbWl0bWVk/aWEtZGlnaXRhbC5j/b20vdG9wZ2Vhci9p/bWFnZXMvMjAyMC8w/OC8xMC9nb29nbGUt/bWFwcy0xLTE1OTcw/MzUxNTguanBn" alt=""></div>
+          <div id="shop_map_text">
+            <div>
+              <h4>You're Shopping Guam - Tamuning #1710</h4>
+              <h4>OPEN Until 10:00 pm</h4>
+            </div>
+            <div>
+              <p>295 Chalan Pasaheru Route 10a<br>Tamuning, GU</p>
+              <a href="#">(671)648-0440</a>
+            </div>
+            <div class="flex" id="shop_text_a">
+              <a href="#">Stores details</a>
+              <a href="#">Local Ad</a>
+            </div>
+          </div>
+          <hr>
+          <div id="shop_right_text">
+            <div><h4>Free Livestream Workshops</h4></div>
+            <div><p>From basic maintenance to Pinterest-worthy <br> projects, our associates will teach you how to go <br> from idea to done.</p></div>
+            <div><a href="#">View all Workshops</a></div>
+          </div>
+          <div id="shop_right_pic">
+            <img src="https://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Test_and_Target/UX_Assets/thd-livestream-workshop-2x.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div id="off_div">
+        <div class="off_divs">
+          <img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-Tools-2.jpg" alt="">
+          <h2>UP TOO $150 OFF</h2>
+          <p>Select Tools + Free Delivery</p>
+        </div>
+        <div class="off_divs">
+          <img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-Storage-3.jpg" alt="">
+          <h2>UP TOO $25 OFF</h2>
+          <p>Select Storage & Organization</p>
+        </div>
+        <div class="off_divs">
+          <img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-Decor-3.jpg" alt="">
+          <h2>UP TOO $30 OFF</h2>
+          <p>Select Furniture, mattresses & Decor</p>
+        </div>
+        <div class="off_divs">
+          <img src="https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-Fans.jpg" alt="">
+          <h2>UP TOO $20 OFF</h2>
+          <p>Select Celling Fan</p>
+        </div>
+      </div>
+      <div id="below_off" class="flex">
+        <div class="below_off_div">
+          <div class="below_img_div">
+            <img src="https://assets.thdstatic.com/images/v1/app.svg" alt="">
+          </div>
+          <hr>
+          <p class="bold">Save time with the <br>Home Depot App</p>
+          <p>Browse it. Buy it. Get it</p>
+        </div>
+        <div class="below_off_div">
+          <div class="below_img_div">
+            <img src="https://assets.thdstatic.com/images/v1/Saw.svg" alt="">
+          </div>
+          <hr>
+          <p class="bold">Rent what you<br>Need</p>
+          <p>To get more done</p>
+        </div>
+        <div class="below_off_div">
+          <div class="below_img_div">
+            <img src="https://assets.thdstatic.com/images/v1/curbsideOrangeOutline.svg" alt="">
+          </div>
+          <hr>
+          <p class="bold">We delivery<br>Curbside</p>
+          <p>Order online for convenient store pickup</p>
+        </div>
+        <div class="below_off_div">
+          <div class="below_img_div">
+            <img src="https://assets.thdstatic.com/images/v1/delivery.svg" alt="">
+          </div>
+          <hr>
+          <p class="bold">Free delivery</p>
+          <p>Over one million online items eligible</p>
+        </div>
+      </div>
+      <div id="foot_up_img">
+        <img src="https://assets.thdstatic.com/personalized-homepage-ui/0.437.0/build/7a1dbef577b828b0c78c9f02b7481b22.jpg" alt="">
+      </div>
+      <div id="white_space"></div>
+      <div id="help_number" class="flex">
+        <div><p class="bold">How doers get more done™</p></div>
+        <div>Need Help? Please call us at: <a href="#">1-800-HOME-DEPOT (1-800-466-3337)</a></div>
+      </div>
+      <div id="footer">
+        <div id="link" class="flex">
+        <div class="links_footer" id="Customer">
+          <p class="bold">Customer Service</p>
+          <div><a href="#">Check Order Status</a></div>
+          <div><a href="#">Pay Your Credit Card</a></div>
+          <div><a href="#">Order Cancellation</a></div>
+          <div><a href="#">Returns</a></div>
+          <div><a href="#">Shipping & Delivery</a></div>
+          <div><a href="#">Product Recalls</a></div>
+          <div><a href="#">Help & FAQs</a></div>
+          <div><a href="#">Privacy & Security Center</a></div>
+        </div>
+        <div class="links_footer" id="Resources">
+          <p class="bold">Resources</p>
+          <div><a href="#">Specials & Offers</a></div>
+          <div><a href="#">Military Discount Benefit</a></div>
+          <div><a href="#">DIY Projects & Ideas</a></div>
+          <div><a href="#">Truck & Tool Rental</a></div>
+          <div><a href="#">Installation & Services</a></div>
+          <div><a href="#">Moving Supplies & Rentals</a></div>
+          <div><a href="#">Protection Plans</a></div>
+          <div><a href="#">Rebate Center</a></div>
+          <div><a href="#">Gift Cards</a></div>
+          <div><a href="#">Catalog</a></div>
+          <div><a href="#">Subscriptions</a></div>
+        </div>
+        <div class="links_footer" id="About Us">
+          <p class="bold">About Us</p>
+          <div><a href="#">Careers</a></div>
+          <div><a href="#">Corporate Information</a></div>
+          <div><a href="#">Digital Newsroom</a></div>
+          <div><a href="#">Home Depot Foundation</a></div>
+          <div><a href="#">Investor Relations</a></div>
+          <div><a href="#">Government Customers</a></div>
+          <div><a href="#">Suppliers & Providers</a></div>
+          <div><a href="#">Affiliate Program/a></div>
+          <div><a href="#">Eco Options</a></div>
+          <div><a href="#">Corporate Responsibility</a></div>
+          <div><a href="#">Home Depot Licensing Information</a></div>
+        </div>
+        <div id="footer_email">
+          <div id="box_foot_right">
+            <p><i class="fa-solid fa-credit-card"></i>Special Financing Available everyday*</p>
+            <div><a href="#">Pay & Manage Your Card</a></div>
+            <div><a href="#">Credit Offers</a></div>
+          </div>
+          <div><p>Get $5 off when you sign up for emails with savings and tips.</p></div>
+          <div id="footer_input">
+            <input type="text" placeholder="Enter Email Address">
+            <button>Go</button>
+          </div>
+          <div id="foot_logo" class="flex">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-solid fa-blog"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div id="logos">
+        <p class="center">Shop Our Brand</p>
+        <div class="flex" id="logo_first_line">
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/company-store.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/blinds-dot-com.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/home-decorator.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/hampton-bay.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/husky.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/lifeproof.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/glacier-bay.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/everbilt.png" alt=""></div>
+        </div>
+        <div class="flex" id="logo_second_line">
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/style-well.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/hdx.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/vigoro.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/traffic-master.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/defiant.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/eco-smart.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/home-accent.png" alt=""></div>
+          <div class="logo_img"><img src="https://assets.thdstatic.com/images/v1/brand-logos/legend-force.png" alt=""></div>
+        </div>
+        </div>
+        <div id="copyright">
+          <p>© 2000-2021 Home Depot Product Authority, LLC. All Rights Reserved. Use of this site is subject to certain Terms Of Use. <br>
+            Local store prices may vary from those displayed. Products shown as available are normally stocked but inventory levels cannot be guaranteed<br>For screen reader problems with this website, please call 1-800-430-3376 or text 38698 (standard carrier rates apply to texts)
+          </p>
+          <div>
+            <ul class="flex">
+              <li><a href="#">Privacy & Security Statement</a></li>
+              <li><a href="#">Cookie Usage</a></li>
+              <li><a href="#">My Preference Center</a></li>
+              <li><a href="#">California Privacy Rights & Report</a></li>
+              <li><a href="#">Do Not Sell My Personal Information</a></li>
+              <li><a href="#">California Supply Chain Act</a></li>
+              <li><a href="#">Site Map</a></li>
+              <li><a href="#">Store Directory</a></li>
+              <li><a href="#">Mobile Site</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/e5ccb9f482.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           var arrow=$(".arrow-up");
+            var form=$(".myaccount-form");
+            var status=false;
+            $("#myaccount").click(function(event){
+                event.preventDefault();
+                if(status== false){
+                   arrow.fadeIn();
+                    form.fadeIn();
+                    status=true;
+                }
+                else{
+                    arrow.fadeOut();
+                    form.fadeOut();
+                    status=false;
+                }
+            })
+        })
+
+        
+    </script>
+ 
+  </body>
+</html>
+<script>
+  let img_arr = ["https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-Appliances-3.jpg","https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220217-BathFlash.jpg","https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/20220127-Patio-2.jpg","https://contentgrid.thdstatic.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/fw1-f-d.png"]
+  let slideshow_div = document.getElementById("slideshow")
+  let slide_img = document.getElementById("slide_img")
+  let i = 0
+  setInterval(function(){
+    slide_img.src = img_arr[i]
+    i = i +1
+    if(i==4){
+      i = 0
+    }
+  },2000)
+
+  function showproduct(){
+    let selected=document.getElementById("search-input").value
+    if(selected=="sofa"){
+      window.location.href="sofa.html"
+    }else if(selected=="bed"){
+      window.location.href="beds.html"
+    }
+  }
+  
+</script>

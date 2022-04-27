@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+
+</head>
+<body>
+    <div id="container">
+        <div id="right">
+            <div class="row1">
+                <img style="width: 60px;height: 60px;" src="https://www.homedepot.com/mycheckout/assets/react/images/hd-logo.svg" alt="">
+                <h1>Secure checkout</h1>
+                <img style="margin-left: 2%;" src="https://www.homedepot.com/mycheckout/assets/react/images/icons/lock-icon-dark-gray.svg" alt="">
+
+            </div>
+            <div>
+                <div class="row2">
+                    <h2>Shipping</h2>
+                    <h4 style="font-weight: normal;margin-top: 4%;color: #666;">Done</h4>
+                </div>
+                <form id="form1">
+                    <div class="row3">
+                        <div class="col1">
+                            <h4 style="margin-top: 0px;font-weight: normal;color: #666;">First Name</h4>
+                            <input type="text" required/>
+                        </div>
+                        
+                        
+                        <div class="col1">
+                            <h4 style="margin-top: 0px;font-weight: normal;color: #666;">Last Name</h4>
+                            <input type="text" required/>
+                        </div>
+                    </div>
+                    
+                    <h4>Phone</h4>
+                    <input type="number" required/>
+                   
+                    <h4>Shipping Address<span></span></h4>
+                    <input type="text" placeholder="Address Line 1" required/>
+                    <h4 >Address Line 2 (Optional)<span></span></h4>
+                    <input style="width: 50%;" type="text" placeholder="Apartment,suite,building,etc" required/>
+                    <h4>Zip Code</h4><span></span></h4>
+                    <div class="row4">
+                        
+                    <input style="width: 25%;" type="number" required/><p style="margin-left: 2%;">Enter Zip Code to see city and state</p>
+                    </div>
+                    <div class="row5">
+                        <input type="checkbox" class="larger" name="checkBox1" required>
+                        <h4 style="margin-top: 10px;font-weight: normal;color: #666;">Use as Billing Address</h4>
+                    </div>
+                    <div class="row5">
+                        <input type="checkbox" class="larger" name="checkBox2" required>
+                        <h4 style="margin-top: 10px;font-weight: normal;color: #666;">Text me updates on the status of my code<span></span></h4>
+
+                    </div>
+                    <h6 style="font-size: 0.8rem;font-weight: normal;
+                    ">Message and data rates may apply and texts may be sent between the hours of [8:00 am and 9:00 pm]. Privacy Policy at www.homedepot.com/c/Privacy_Security. <a style="text-decoration: none;" href="">Full terms</a></h6>
+                    
+                  </form>
+                  
+                  <hr style="margin-top: 9%;">
+
+                  <div id="form2">
+                    <h2 style="margin-top: 5%;">Payment</h2>
+                    <label class="container1"><img style="width:65px;height: 35px;margin-top: -5px;" src="https://www.homedepot.com/mycheckout/assets/react/images/layout/paypal-logo.png
+                      " alt="">
+                      <input type="radio"  name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container1">Credit Card
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <div class="creditcard">
+                      <img style="width: 50px;height: 30px;margin: 5px;" src="https://www.homedepot.com/mycheckout/assets/react/images/icons/unknown.png" alt="">
+                    <input  id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="Enter credit card number">
+                    </div>
+                    
+
+                   <div class="row6">
+                       <h3>expiration</h3>
+                       <h5>CVV (on back)</h5>
+                   </div>
+                   
+                  <div id="expiration">
+                    
+                    <select
+                      id="month"
+                      name="dob-month"
+                      class="datefield"
+                      style="
+                        width: 213px;
+                        height: 40px;
+                        background-color: white;
+                        margin-right: 0.5%;
+                        ">
+                      <option value="">Month</option>
+                      <option value="01" style="color: blue;">01-Jan</option>
+                      <option value="02" style="color: blue;">02-Feb</option>
+                      <option value="03" style="color: blue;">03-Mar</option>
+                      <option value="04" style="color: blue;">04-Apr</option>
+                      <option value="05" style="color: blue;">05-May</option>
+                      <option value="06" style="color: blue;">06-Jun</option>
+                      <option value="07" style="color: blue;">07-Jul</option>
+                      <option value="08" style="color: blue;">08-Aug</option>
+                      <option value="09" style="color: blue;">09-Sep</option>
+                      <option value="10" style="color: blue;">10-Oct</option>
+                      <option value="11" style="color: blue;">11-Nov</option>
+                      <option value="12" style="color: blue;">12-Dec</option>
+                    </select>
+                    <select id="year"
+                      name="dob-year"
+                      class="datefield year"
+                      style="
+                        width: 213px;
+                        height: 40px;
+                        background-color:white;
+                        
+                      "
+                    >
+                      <option value="">Year</option>
+                      <option value="2022" style="color: blue;">2022</option>
+                      <option value="2023" style="color: blue;">2023</option>
+                      <option value="2024" style="color: blue;">2024</option>
+                      <option value="2025" style="color: blue;">2025</option>
+                      <option value="2026" style="color: blue;">2026</option>
+                      <option value="2027" style="color: blue;">2027</option>
+                      <option value="2028" style="color: blue;">2028</option>
+                      <option value="2029" style="color: blue;">2029</option>
+                      <option value="2030" style="color: blue;">2030</option>
+                      <option value="2031" style="color: blue;">2031</option>
+                      <option value="2032" style="color: blue;">2032</option>
+                      <option value="2033" style="color: blue;">2033</option>
+                      <option value="2034" style="color: blue;">2034</option>
+                      <option value="2035" style="color: blue;">2035</option>
+                      <option value="2036" style="color: blue;">2036</option>
+                      <option value="2037" style="color: blue;">2037</option>
+                      <option value="2038" style="color: blue;">2038</option>
+                      <option value="2039" style="color: blue;">2039</option>
+                      <option value="2040" style="color: blue;">2040</option>
+                      <option value="2040" style="color: blue;">2041</option>
+                    </select>
+                    <div class="cvv">
+                      <img style="width: 50px;height: 30px;margin: 5px;" src="https://www.homedepot.com/mycheckout/assets/react/images/icons/unknown.png" alt="">
+                      <input id="cvv" style="width: 155px;height: 36px;background-color: white;border: none;" type="tel" placeholder ="---">
+                      
+                    </div>
+                    
+
+                    
+                  </div>
+                  
+                    
+                    
+                  </div>
+                  <div class="row7">
+                    <input style="margin-top:15px;" type="checkbox" class="click" style="width: 200px;" required>
+                    <h4 style="margin-top: 15px;font-weight: normal;">Save as my default credit card<span></span></h4>
+                  </div>
+                  <p style="color: rgb(62,118,151);">Apply a Gift Card | Have a PO/Job Code for this order?</p>
+                  <hr style="margin-top: 4%;margin-bottom: 0px;">
+                  <div class="row7">
+                    <input style="margin-top:15px;" type="checkbox" class="click" style="width: 200px;" required>
+                    <h4 style="margin-top: 15px;">Yes,I'd like to sign up and get $5 off, plus $100s more savings sent right t my email inbox<span></span></h4>
+                  </div>
+                  <p>The order confirmation and updates will be emailed to anushasurendran333@gmail.com</p>
+                  </div>
+                  <button onclick="orderplaced()">Place Order</button>
+                  <div class="p"><p>We are required by law to charge all applicable sales taxes for online orders.</p>
+                    <p>Please note that the order totals during your checkout reflect estimated sales tax. The actual charge to your form of payment will include applicable state and local sales taxes and will be calculated when order is shipped.</p>
+                    <p>By providing your mobile phone number and clicking Place Order, you agree to receive a text message from Home Depot when your order is ready for pickup. One text per order. Message and data rates may apply and texts may be sent between the hours of [8:00 am and 10:00 pm]. Consent not required and not a condition of purchase. You will also receive email order updates. Not all carriers supported. For help, text HELP to [53747] or call 1-800-HOMEDEPOT; to stop texts, text STOP to[53747] (a confirmation text will be sent).</p>
+                    <p>Local store prices may vary from those displayed. Products shown as available are normally stocked but inventory levels cannot be guaranteed.</p>
+                    <p>© 2000 - 2013 Homer TLC, Inc. All Rights Reserved. Use of this site is subject to certain Terms of Use which constitute a legal agreement between you and The Home Depot U.S.A. inc. View our My Account Terms and Conditions and Privacy & Security Statement.</p>               
+                    </div>
+                  
+                   
+            </div>
+            <div id="left">
+              <div id="cart">
+                <img style="width: 40px;height: 40px;" src="https://www.homedepot.com/mycheckout/assets/react/images/THD_Cart.svg" alt="">
+                <p style="margin-left: 2%;">Edit Cart</p>
+              </div>
+              <div id="box">
+                <div style="height: 45px;" class="row8">
+                  <div class="box1">
+                    <div class="col1">
+                      <h2>Your order</h2>
+                    </div>
+                    <div class="col1">
+                      <!-- *************************************************************************************************************************************************** -->
+                      <h2><b class="totalamount"></b></h2>
+                    </div>
+  
+                  
+                </div>
+                <div  class="row9">
+                  <div id="box2"> 
+                  </div>
+                  <div style="height: 53px;margin: 2%;" class="box2">
+                    <img src="https://www.homedepot.com/mycheckout/assets/react/images/icons/new-shipping-icon.svg" alt="">
+                    <h3>Ship To Home
+                  </div>
+                  <hr style="margin: 2%;">
+                  <div class="inbox1">                   
+                </div>
+                <!-- ************************************************************************************************************************************ -->
+                <div class="mybox">
+
+                </div>                                        
+              </div>
+              <div class="row10">
+                <div class="box3">
+                  <div class="inbox3">
+                      <span style="float:left" data-automation-id="subTotalLabel" class="subtotal"><b>Subtotal</b></span>
+                      <span style="float:right" data-automation-id="subTotalCost" class="cost"><b></b></span>
+                  </div>
+                  
+                  <div class="inbox3">
+                    <span style="float:left" data-automation-id="savings" class="savings"><b style="color: rgb(0,174,77);">Savings</b></span>
+                    <span style="float:right" data-automation-id="savingcost" class="savingcost"><b style="color:rgb(0,174,77);">-$89.15</b></span>
+                  </div>
+                  
+                  <div class="inbox3">
+                    <span style="float:left" data-automation-id="shipping" class="shipping">Shipping</span>
+                    <span style="float:right;color: rgb(0,174,77);" data-automation-id="free" class="savingcost">Free</span>
+                  </div>
+                  <div class="inbox4">
+                    <span style="float:left">Estimated Sales Tax*</span>
+                    <span style="float:right">---</span>
+                  </div>
+                  <p style="margin-top: 0px;margin-left: 0px;">(calculated based on address)</p>
+                  <h4>Apply Tax Exempt ID</h4>
+                  <hr>
+                  <div class="inbox5">
+                    <span style="float:left" data-automation-id="total" class="total"><h2 style="margin: 0px;">Total</h2></span>
+                    <span style="float:right" data-automation-id="savingcost" class="savingcostnew"><h2 style="margin: 0px; font-size: 25px;"></h2></span>
+                  </div>
+                  <p style="color: rgb(0,174,77);margin: 0px;">You saved <b>7% Off</b>  your items</p>
+                  <p>Have a promo code?</p>
+                  <div class="inbox6">
+                    <p style="margin: 2%;"><b>GET $100 OFF* and pay $1035.24 instead</b> on your qualifying purchase, plus receive 6 months everyday financing** on purchases over $299 when you open a new card.</p>
+                    <div class="row11">
+                      <div class="col3">
+                        <img style="width: 60px;height: 40px;" src="https://assets.thdstatic.com/images/v1/plcc-credit-card.png" alt="">
+                      </div>
+                      <div class="col3">
+                        <button class="button1" >Apply Now</button>
+                      </div>
+                      <div class="col3">
+                        <a style="font-size: 20px;text-decoration: none;color: rgb(25, 0, 255);margin-left: 30px;margin-top: 0px;" href="">See Terms</a>
+                      </div>
+                    </div>
+                    <p style="margin-top: 80px;"><b>Need help?</b></p>
+                    <p>Call us at 1-800-466-3337, 6 a.m. - 2 a.m. ET 
+                      <br>
+                      For assistance with custom blinds, call 1-800-658-7320</p>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+
+            </div>
+       
+           
+           
+            
+    </div>
+</body>
+</html>
+<script src="checkout.js"></script>

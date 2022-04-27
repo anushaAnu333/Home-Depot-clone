@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="https://img.search.brave.com/QADW1dvgEWmFPa89uZEJzl-ho70w83wDHI_fsGh2HsY/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/U0twYzJSWjJKNTlR/MlhNYnRLZWl3SGFI/YSZwaWQ9QXBp" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<style>
+    body{
+        /* background-color: black; */
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 12%; */
+    }
+    
+    .text {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight:600;
+        font-size: 25px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    input[type="email"] {
+        margin-bottom: 20px;
+        height: 38px;
+    }
+    
+    
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    
+    #final {
+        align-content: center;
+        height: 45px;
+        width: 400px;
+        margin-top: 20px;
+        color: white;
+    }
+    
+    .links p {
+        font-size: 13px;
+        color: rgb(92, 92, 92);
+        margin: 17px 0;
+    }
+    
+    #keepmesignin {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #keepmesignin label {
+        margin-left: 5px;
+    }
+    
+    #login {
+        width: 30%;
+        margin: auto;
+    }
+    
+    button {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        background-color: rgb(248,99,3);
+        font-size: 16px;
+        border:none;
+        color: white;
+        font-weight: bold;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    button:disabled{
+        cursor:not-allowed;
+        background-color: rgb(160, 160, 160);
+    }
+    .back{
+        color: rgb(62,118,151);
+    }
+    .back:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .back span{
+        padding-right: 2px ;
+    }
+    #email{
+        color: rgb(95, 95, 95);
+    }
+    .des{
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    #fLinks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    #createanacc{
+        background-color: white;
+        border: 2px solid rgb(248,99,3);
+        color: rgb(248,99,3);
+    }
+    #createanacc:hover{
+        background-color: rgb(248,99,3);
+        color: white;
+    }
+    #atags{
+        text-align: center;
+        font-size: 13px;
+    }
+    #atags a {
+        color: rgb(9, 108, 136);
+        text-decoration: none;
+    }
+    #center{
+        text-align: center;
+        padding: 8px;
+    }
+    #atags a:hover {
+        text-decoration: underline;
+    }
+    @media screen and (max-width:600px) {
+        #login{
+            width: 80%;
+        }
+    }
+    @media screen and (min-width:601px) and (max-width:900px){
+        #login{
+            width: 65%;
+        }
+    }
+</style>
+
+<body>
+    <div id="login">
+        <img alt="Orbitz" class="logo" src="https://assets.homedepot-static.com/single-signin-ui/0.586.0/build/7b4c51f66559b768081eabf61db98f2d.svg">
+        <p class="text">Sign In or Create an Account</p>
+        <p onclick="history.back()" class="back"><span>< </span> Back</P>
+        <p class="des">First, enter your email address</p>
+        <form class="boxes">
+            <p id="email">Email Address</p>
+            <input id="box1" type="email" onkeyup="validate()"/>
+            <button id="submit" type="submit" disabled>Continue</button>
+        </form>
+        <div id="fLinks">
+            <p id="center">Don’t Have an Account?</p>
+            <button id="createanacc"> Create an Account </button>
+            <p id="atags">By selecting 'Sign In' you are agreeing to the <a href="#">Pro Xtra Terms and Conditions</a>, <a href="#">Privacy and Security Statement</a>, & <a href="#">My Account Terms and Conditions</a>. For Two-Factor Authentication, message and data rates may apply.</p>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+
+</html>

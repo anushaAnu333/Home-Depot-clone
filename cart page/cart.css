@@ -1,0 +1,413 @@
+#container
+{
+    /* border: 1px solid black; */
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+.left
+{
+    width: 65%;
+    /* border: 1px solid blue; */
+}
+.right
+{
+    width: 35%;
+    margin-left: 35px;
+    /* border: 1px solid blue; */
+}
+.text
+{
+    font-size: 30px;
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 3px solid #f96302;
+    width: 153px;
+}
+.delete
+{
+    color: #507ba1;
+}
+.resshow
+{
+    border: 1px solid #eeeeee;
+    margin-top: 10px;
+    background-color: #eeeeee;
+}
+.cartbox
+{
+    width: 97%;
+    height: 380px;
+    margin: 10px;
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    background-color: white;
+}
+.mimg
+{
+    /* border: 1px solid black; */
+    height: 220px;
+    margin-top: 10px;
+}
+.rightbox
+{
+    /* border: 1px solid black; */
+    height: 350px;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* text-align: center; */
+}
+.price
+{
+    font-weight: bold;
+    margin : 10px;
+    font-size: 22px;
+}
+.three
+{
+    /* border: 1px solid teal; */
+    height: 130px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.three > div
+{
+    border: 1px solid grey;
+    text-align: center;
+}
+.intext
+{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.intext2
+{
+    font-size: 14px;
+    text-align: center;
+}
+.threebox p
+{
+    margin: 0px;
+}
+.smallimage
+{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+}
+.emailbox
+{
+    display: flex;
+}
+.noti
+{
+    border: 2px solid #f96302;
+    width : 150px;
+    text-align: center;
+    font-weight: bold;
+    color: #f96302;
+}
+.resemail
+{
+    width : 200px;
+    height: 30px;
+}
+.lastdiv
+{
+    display: flex;
+}
+.bottomtxt
+{
+    margin-right: 20px;
+    color: #507ba1;
+    border-right: 1px solid gray;
+    padding-right: 17px;
+}
+.justname
+{
+   margin-top: 15px;
+   font-size: 27px;
+}
+.bill
+{
+    display: flex;
+}
+.bill > div
+{
+    /* border: 1px solid red; */
+    height: 80px;
+    width: 100px;
+    margin-top: 20px;
+}
+.billtype
+{
+    margin-right: 100px;
+}
+.billtype p
+{
+    font-weight: bold;
+}
+.amount
+{
+    font-weight: bold;
+}
+.promocode
+{
+    width: 93px;
+}
+.finalprice
+{
+    display: flex;
+}
+.saving
+{
+    margin-top: -33px;
+    color: green;
+    margin-bottom: 30px;
+}
+.except
+{
+    color: #8c8c8c;
+    font-size: 13px;
+    margin-top: 45px;
+}
+.orange
+{
+    border: 1px solid #f96302;
+    width: 100%;
+    height: 37px;
+    margin-top: 20px;
+    background-color:#f96302 ;
+}
+.orange div
+{
+    text-align: center;
+    margin-top: 4px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+.paypal
+{
+    width: 200px;
+    margin-left: 150px;
+    height: 100px;
+}
+.boldline
+{
+    background-color: #eeeeee;
+    height: 12px;
+}
+
+/* *********************************************************************** */
+
+#navbar {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  #nav_cont{
+  margin: auto;
+    width: 98%;
+}
+#orange_head {
+  width: 100%;
+  height: 29px;
+  background-color: #F96302;
+  color: white;
+  text-align: center;
+}
+#orange_head > p {
+  margin: 0;
+  padding: 5px;
+}
+#search_bar_div img {
+  width: 60px;
+  height: 60px;
+}
+#search_input{
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+#search_input input {
+    width: 600px;
+    height: 30px;
+  }
+  #search_btn_img {
+      height: 23px;
+  }
+  #search_btn{
+      width: 30px;
+      margin-top: 5px;
+      background-color: #F96302;
+      margin: 0;
+      padding: 0;
+      height: 35px;
+}
+#search_btn button{
+  width: 100%;
+  height: 100%;
+  background-color: #F96302;
+}
+.flex {
+  display: flex;
+}
+#text_search_bar_left * {
+  margin: 0;
+  /* margin-left: 10px; */
+}
+#hr_line {
+  margin: 0px 10px;
+  height: 70px;
+}
+#delivery_text * {
+  margin: 0;
+}
+#nav_div {
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#search_last_text {
+  justify-content: space-between;
+  width: 250px;
+  margin-top: 20px;
+}
+#mid_text {
+  display: flex;
+  justify-content: end;
+}
+#mid_text > div {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  font-size: 11px;
+}
+#mid_text p {
+  padding: 0;
+  margin: 0;
+}
+#navbar_bottom{
+    justify-content: space-between;
+    font-size: 14px;
+}
+.fa-solid, .fas {
+font-family: "Font Awesome 6 Free";
+font-weight: 1000;
+font-size: 16px;
+}
+.menu-items>li{
+    font-size: 14px;
+}
+#search_last_text>span:hover{
+    cursor: pointer;
+
+  }
+/*      footer     */
+#white_space{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+  }
+
+#help_number{
+    display: flex;
+   
+    height: 15px;
+    padding: 15px;
+    /* padding-left: 14%;
+    padding-right: 14%; */
+    background-color: #f4f5f5;
+    justify-content: space-between;
+  }
+  #help_number p{
+    margin: 0;
+  }
+#link{
+    gap: 3%;
+    justify-content: space-between;
+  }
+  #link a{
+    color: #88a2b3;
+    text-decoration: none;
+    line-height: 1.8;
+    font-size: 13px;
+  }
+#footer{
+    background-color: white;
+    padding-top: 30px;
+   /* padding-left: 13%;
+   padding-right: 13%; */
+  }
+  #box_foot_right{
+    width: 280px;
+    height: 170px;
+    padding: 20px;
+
+    position: relative;
+    align-items: center;
+    background-color: #f4f5f5;
+   }
+   #box_foot_right div{
+    margin: 15px 0px;
+  }
+  #white_space{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+  }
+  #foot_logo{
+    justify-content: space-between;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  #footer_input input{
+    width: 250px;
+    height: 30px;
+    margin-right: 0;
+  }
+  #footer_input button{
+    height: 35px;
+    background-color: #f96302;
+    color: white;
+    width: 50px;
+  }
+  .center{
+    text-align: center;
+  }
+  #logo_first_line{
+    /* gap: 1%; */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 40px;
+   }
+   #logo_second_line{
+     /* gap: 1%; */
+     justify-content: space-between;
+     margin-bottom: 20px;
+  }
+  #logos{
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+  }
+  #copyright{
+    font-size: 13px;
+    width: 73%;
+    margin: auto;
+    text-align: center;
+  }
+  #copyright ul{
+    justify-content: space-between;
+    list-style: none;
+  }
+  #copyright a{
+    text-decoration: none;
+    font-size: 10px;
+    width: 80%;
+    color: #79b6d6;
+  }
